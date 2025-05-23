@@ -1,5 +1,5 @@
 import React from 'react';
-import timelineData from '../data/TImelineData';
+import timelineData from '../data/TimelineData';
 
 const Timeline = () => {
   return (
