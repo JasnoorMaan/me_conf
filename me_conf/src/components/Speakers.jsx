@@ -1,4 +1,5 @@
-import speakers from '../data/SpeakersData'
+import React from 'react';
+import speakers from '../data/SpeakersData.js'
 import {
     Card,
     CardContent,

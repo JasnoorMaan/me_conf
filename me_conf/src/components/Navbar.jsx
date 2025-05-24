@@ -10,6 +10,18 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      });
+    }
+    setIsOpen(false); // Close mobile menu after clicking
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -26,14 +38,14 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Tracks", href: "#tracks" },
-    { name: "Committee", href: "#committee" },
-    { name: "Important Dates", href: "#dates" },
-    { name: "Registration", href: "#registration" },
-    { name: "Contact", href: "#contact" },
-    { name: "Brochure", href: "#brochure" },
+    // { name: "Home", href: "#", section: null },
+    { name: "About", href: "#about", section: "about" },
+    { name: "Tracks", href: "#tracks", section: "tracks" },
+    { name: "Committee", href: "#committee", section: "committee" },
+    { name: "Important Dates", href: "#dates", section: "dates" },
+    // { name: "Registration", href: "#registration", section: "registration" },
+    { name: "Contact", href: "#contact", section: "contact" },
+    { name: "Brochure", href: "#brochure", section: "brochure" },
   ];
 
   return (
@@ -60,13 +72,13 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
-                className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105"
+                onClick={() => link.section ? scrollToSection(link.section) : window.scrollTo({top: 0, behavior: 'smooth'})}
+                className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
             <Button className="bg-conf-green-600 hover:bg-conf-green-700 text-white px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               Register Now
@@ -89,14 +101,13 @@ const Navbar = () => {
           <div className="md:hidden mt-6 pb-6 bg-white/95 backdrop-blur-lg rounded-lg shadow-xl border border-gray-200/50 mx-4">
             <div className="px-4 py-2">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block py-3 text text-gray-700 hover:text-conf-green-600 transition-colors text-center border-b border-gray-100 last:border-b-0"
+                  onClick={() => link.section ? scrollToSection(link.section) : window.scrollTo({top: 0, behavior: 'smooth'})}
+                  className="block py-3 text text-gray-700 hover:text-conf-green-600 transition-colors text-center border-b border-gray-100 last:border-b-0 w-full bg-transparent border-none cursor-pointer"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
               <div className="mt-4 flex justify-center">
                 <Button className="bg-conf-green-600 hover:bg-conf-green-700 text-white px-6 py-2 shadow-lg">

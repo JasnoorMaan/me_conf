@@ -5,8 +5,19 @@ import SPRINGERlogo from "/SPRINGERlogo.svg";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+      });
+    }
+  };
+
   return (
-    <footer className="relative bg-gray-900 text-white py-12 px-4 overflow-hidden">
+    <footer id="contact" className="relative bg-gray-900 text-white py-12 px-4 overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -54,34 +65,34 @@ const Footer = () => {
             <h3 className="subheading pb-2 border-b border-gray-700">Quick Links</h3>
             <ul className="space-y-3 pt-2">
               <li>
-                <a href="#about" className="text text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('about')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
                   About
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#tracks" className="text text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('tracks')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
                   Conference Tracks
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#committee" className="text text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('committee')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
                   Committee
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#dates" className="text text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('dates')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
                   Important Dates
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#registration" className="text text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('registration')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
                   Registration
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#contact" className="text text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('contact')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
                   Contact
-                </a>
+                </button>
               </li>
             </ul>
           </div>

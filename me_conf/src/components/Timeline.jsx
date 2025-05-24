@@ -1,9 +1,9 @@
 import React from 'react';
-import timelineData from '../data/TimelineData';
+import timelineData from '../data/TimelineData.js';
 
 const Timeline = () => {
   return (
-    <section className="py-16 px-4">
+    <section id="dates" className="py-16 px-4">
       <div className="min-w-[40vw] mx-auto">
         <h2 className="heading text-center mb-16">Important Dates</h2>
         

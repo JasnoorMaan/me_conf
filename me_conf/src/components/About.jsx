@@ -6,7 +6,7 @@ const About = () => {
   const aboutNITJText = `Dr B R Ambedkar National Institute of Technology was established in the year 1987 as Regional Engineering College and was given the status of National Institute of Technology (Deemed University) by the Government of India on October 17, 2002 under the aegis of Ministry of Human Resource Development, New Delhi. Now the Ministry of Human Resource Development, Government of India has declared the Institute as "Institute of National Importance" under the act of Parliament-2007. As one of the National Institutes of Technology (NIT), the Institute has the responsibility of providing high quality education in Engineering, Technology and Sciences to produce competent technical and scientific manpower for the country. The Institute offers BTech, MTech, MSc, MBA and PhD programmes in the several disciplines of Engineering, Technology and Sciences. The institute is located on the G.T Road Amritsar bye-pass at a distance of 15 km from Jalandhar Bus Stand, 12 km from Jalandhar City Railway Station, and 18 km from Jalandhar Cantt. railway station. The institute is well connected to the National Capital through rail and road link.`;
 
   return (
-    <section className='py-16 px-4'>
+    <section id="about" className='py-16 px-4'>
       {/* About TFGET Section */}
       <div className='container mx-auto max-w-4xl mb-16'>
         <h1 className='heading text-center mb-12'>About TFGET</h1>

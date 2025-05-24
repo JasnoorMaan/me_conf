@@ -1,10 +1,10 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import conferenceThemes from '../data/ThemeData';
+import conferenceThemes from '../data/ThemeData.js';
 
 const ConferenceThemes = () => {
   return (
-    <section className="relative py-16 px-4 overflow-hidden">
+    <section id="tracks" className="relative py-16 px-4 overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
