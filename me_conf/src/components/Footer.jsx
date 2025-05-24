@@ -33,71 +33,31 @@ const Footer = () => {
           backgroundPosition: 'bottom center'
         }}
       />
-      <div className="container mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-4">
-          <div>
-            {/* <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-conf-green-600 flex items-center justify-center">
-                <span className="font-bold text-white">TF</span>
-              </div> */}
-              {/* <span className="subheading font-thin">TFGET-2026</span>
-            </div> */}
+      <div className="container mx-auto relative z-10 px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+          {/* Left Column - Institute Information */}
+          <div className="lg:pr-8">
             <div className="flex flex-row gap-4 pb-4">
               <img src={NITJlogo} alt="NITJlogo" className="w-16 h-16 rounded-full flex items-center justify-center mb-2" />
-            <h2 className="subheading text-white pb-2">Dr. B.R. Ambedkar National Institute of Technology Jalandhar</h2>
+              <h2 className="subheading text-white pb-2">Dr. B.R. Ambedkar National Institute of Technology Jalandhar</h2>
             </div>
             <p className="normal-text font-semibold text-white pb-4">
               1st International Conference on Thermo Fluids and Green Energy Technology
             </p>
-            <p className="muted-text text-gray-400">
+            <p className="muted-text text-gray-400 pb-6">
               January 16-18, 2026<br />
               NIT Jalandhar, Punjab, India
             </p>
             <div>
-            <p className="normal-text font-semibold text-white py-4">
-              Supported by:
-            </p>
-            <img src={SPRINGERlogo} alt="Springer" className="h-12 mb-2" />
+              <p className="normal-text font-semibold text-white py-4">
+                Supported by:
+              </p>
+              <img src={SPRINGERlogo} alt="Springer" className="h-12 mb-2" />
             </div>
           </div>
           
-          <div>
-            <h3 className="subheading pb-2 border-b border-gray-700">Quick Links</h3>
-            <ul className="space-y-3 pt-2">
-              <li>
-                <button onClick={() => scrollToSection('about')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
-                  About
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('tracks')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
-                  Conference Tracks
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('committee')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
-                  Committee
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('dates')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
-                  Important Dates
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('registration')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
-                  Registration
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollToSection('contact')} className="text text-gray-400 hover:text-white transition-colors bg-transparent border-none cursor-pointer text-left">
-                  Contact
-                </button>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
+          {/* Right Column - Contact Information */}
+          <div className="lg:pl-8">
             <h3 className="subheading pb-2 border-b border-gray-700">Contact</h3>
             <div className="space-y-2 pt-2">
               {/* Compact contact entries */}
@@ -138,13 +98,18 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center px-2">
           <p className="normal-text text-gray-400 mb-4 md:mb-0">
             &copy; {currentYear} TFGET-2026. All rights reserved.
           </p>
           <div className="flex space-x-2 normal-text text-gray-400">
             <p className="normal-text">Developed by:</p>
-            <a href="https://www.linkedin.com/in/jasnoormaan/" className="hover:text-white transition-colors">
+            <a 
+              href="https://www.linkedin.com/in/jasnoormaan/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors underline"
+            >
               Jasnoor Maan
             </a>
           </div>
