@@ -30,7 +30,7 @@ const HeroSection = () => {
         <div className="container mx-auto px-4 z-20 relative">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <div className="py-8 inline-block">
-              <span className="bg-conf-green-100 text-conf-green-800 px-6 py-2 rounded-full muted-text font-medium shadow-sm">
+              <span className="bg-conf-green-100 text-conf-green-800 px-6 py-2 rounded-full normal-text font-semibold shadow-sm">
                 January 16th-18th, 2026 (Hybrid Mode)
               </span>
             </div>

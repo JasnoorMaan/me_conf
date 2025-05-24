@@ -29,10 +29,10 @@ const ConferenceThemes = () => {
         </div>
 
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8 bg-white shadow-sm border">
+          <TabsList className="flex flex-wrap w-full mb-8 bg-white shadow-sm border gap-2 h-auto p-2">
             <TabsTrigger 
               value="overview" 
-              className="text font-medium data-[state=active]:bg-conf-green-600 data-[state=active]:text-white"
+              className="flex-1 min-w-[120px] sm:min-w-0 normal-text font-medium data-[state=active]:bg-conf-green-600 data-[state=active]:text-white"
             >
               Overview
             </TabsTrigger>
@@ -40,7 +40,7 @@ const ConferenceThemes = () => {
               <TabsTrigger 
                 key={track.id}
                 value={track.id}
-                className="text font-medium data-[state=active]:bg-conf-green-600 data-[state=active]:text-white"
+                className="flex-1 min-w-[120px] sm:min-w-0 text font-medium data-[state=active]:bg-conf-green-600 data-[state=active]:text-white"
               >
                 {track.title.split(':')[1].trim()}
               </TabsTrigger>
