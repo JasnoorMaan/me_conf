@@ -40,8 +40,8 @@ const About = () => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            height: '800px',
-            maxHeight: '800px',
+            height: window.innerWidth < 768 ? '1000px' : '800px',
+            maxHeight: window.innerWidth < 768 ? '1000px' : '800px',
             overflow: 'hidden'
           }}
           onMouseEnter={() => window.innerWidth >= 768 && setIsHovered(true)}
@@ -64,9 +64,6 @@ const About = () => {
             <div className={`transition-all duration-500 ease-in-out w-full h-full flex flex-col justify-start md:justify-center items-center md:absolute ${
               isHovered || window.innerWidth < 768 ? 'opacity-100 transform scale-100' : 'opacity-0 transform scale-95 md:absolute md:pointer-events-none'
             }`}>
-              <h3 className="subheading text-white mb-4 md:mb-6 text-center block md:hidden">
-                ABOUT NITJ
-              </h3>
               <div className="w-full h-full flex flex-col justify-center px-2 md:px-4">
                 <div className="flex-1 flex items-center">
                   <p className="normal-text text-gray-100 leading-relaxed text-justify max-w-none md:px-4">
