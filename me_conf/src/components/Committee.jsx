@@ -16,6 +16,11 @@ const Committee = () => {
       "Prof. Pramod Kumar",
       "Dr. S. S. Sandhu"
     ],
+    organizingSecretary: [
+      "Dr. Dwesh K. Singh",
+      "Dr. Rajan Kumar",
+      "Dr. Satyender Singh"
+    ],
     conferenceCoChair: [
       "Dr. Anand Vaz",
       "Dr. S K Tiwari",
@@ -23,11 +28,6 @@ const Committee = () => {
       "Dr. Raman Bedi",
       "Er. Ajay Trehan",
       "Prof. D. K. Shukla"
-    ],
-    organizingSecretary: [
-      "Dr. Dwesh K. Singh",
-      "Dr. Rajan Kumar",
-      "Dr. Satyender Singh"
     ],
     jointSecretary: [
       "Dr. Ranchan Chauhan",
@@ -88,15 +88,15 @@ const Committee = () => {
               title="Conference Chair" 
               members={organizingCommittee.conferenceChair} 
             />
+
+            <CommitteeSection 
+              title="Organizing Secretary" 
+              members={organizingCommittee.organizingSecretary} 
+            />
             
             <CommitteeSection 
               title="Conference Co-Chair" 
               members={organizingCommittee.conferenceCoChair} 
-            />
-            
-            <CommitteeSection 
-              title="Organizing Secretary" 
-              members={organizingCommittee.organizingSecretary} 
             />
             
             <CommitteeSection 
