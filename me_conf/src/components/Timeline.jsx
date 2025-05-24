@@ -1,5 +1,5 @@
 import React from 'react';
-import timelineData from '../data/TimelineData.js';
+import TimelineData from '../data/TimelineData';
 
 const Timeline = () => {
   return (
@@ -11,7 +11,7 @@ const Timeline = () => {
           {/* Vertical Line */}
           <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-conf-green-600 via-conf-green-500 to-conf-green-700"></div>
           
-          {timelineData.map((item, index) => (
+          {TimelineData.map((item, index) => (
             <div key={item.id} className="relative pb-12 last:mb-0">
               
               {/* Timeline Dot */}
@@ -59,7 +59,7 @@ const Timeline = () => {
               </div>
               
               {/* Connector to next item */}
-              {index < timelineData.length - 1 && (
+              {index < TimelineData.length - 1 && (
                 <div className="absolute left-6 top-16 w-0.5 h-12 bg-gradient-to-b from-conf-green-400 to-conf-green-600 opacity-60"></div>
               )}
             </div>

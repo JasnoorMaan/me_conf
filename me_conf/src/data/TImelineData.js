@@ -1,4 +1,4 @@
-const timelineData = [
+const TimelineData = [
       {
         id: 1,
         date: "1st Aug 2025",
@@ -37,4 +37,4 @@ const timelineData = [
       }
     ];
 
-export default timelineData
+export default TimelineData
