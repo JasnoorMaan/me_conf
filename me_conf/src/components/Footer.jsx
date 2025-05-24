@@ -99,22 +99,41 @@ const Footer = () => {
           
           <div>
             <h3 className="subheading pb-2 border-b border-gray-700">Contact</h3>
-            <div className="space-y-3 pt-2">
-              <div className="flex flex-col py-2">
-                <h2 className="normal-text font-semibold">Dr. Dwesh K Singh</h2>
-                <p className="normal-text">singhdk@nitj.ac.in</p>
+            <div className="space-y-2 pt-2">
+              {/* Compact contact entries */}
+              <div className="py-1">
+                <h4 className="normal-text font-semibold text-white mb-1">Dr. Dwesh K Singh</h4>
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center text-sm">
+                  <p className="normal-text text-gray-300">singhdk@nitj.ac.in</p>
+                  <p className="normal-text text-gray-300 lg:text-right">+91 95722 25084</p>
+                </div>
               </div>
-              <div className="flex flex-col py-2">
-                <h2 className="normal-text font-semibold">Dr. Satyender Singh</h2>
-                <p className="normal-text">satyenders@nitj.ac.in</p>
+              
+              <div className="py-1">
+                <h4 className="normal-text font-semibold text-white mb-1">Dr. Satyender Singh</h4>
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center text-sm">
+                  <p className="normal-text text-gray-300">satyenders@nitj.ac.in</p>
+                  <p className="normal-text text-gray-300 lg:text-right">+91 95722 25084</p>
+                </div>
               </div>
-              <div className="flex flex-col py-2">
-                <h2 className="normal-text font-semibold">Dr. Rajan Kumar</h2>
-                <p className="normal-text">rajank@nitj.ac.in</p>
+              
+              <div className="py-1">
+                <h4 className="normal-text font-semibold text-white mb-1">Dr. Rajan Kumar</h4>
+                <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center text-sm">
+                  <p className="normal-text text-gray-300">rajank@nitj.ac.in</p>
+                  <p className="normal-text text-gray-300 lg:text-right">+91 95722 25084</p>
+                </div>
               </div>
-              <p className="text text-gray-400">
-                <span className="text-white">Email:</span> <a href="mailto:tfget2026@nitj.ac.in" className="hover:text-white transition-colors">tfget2026@nitj.ac.in</a>
-              </p>
+              
+              {/* Conference email */}
+              <div className="py-2 mt-3 pt-3 border-t border-gray-700">
+                <p className="text text-gray-400">
+                  <span className="text-white font-semibold">Conference Email:</span><br />
+                  <a href="mailto:tfget2026@nitj.ac.in" className="hover:text-white transition-colors text-sm">
+                    tfget2026@nitj.ac.in
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

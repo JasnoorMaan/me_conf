@@ -1,22 +1,23 @@
-import './App.css'
-import HeroSection from './components/HeroSection'
-import Speakers from './components/Speakers'
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-import AboutTimeline from "./components/AboutTimeline"
-import ConferenceThemes from "./components/ConferenceThemes"
-function App() {
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Advisory from './pages/Advisory';
+import CommitteePage from './pages/CommitteePage';
 
+function App() {
   return (
-    <>
-    <Navbar />
-    <HeroSection />
-    <AboutTimeline />
-    <ConferenceThemes />
-    <Speakers />
-    <Footer />
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/advisory" element={<Advisory />} />
+        <Route path="/committee" element={<CommitteePage />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;
