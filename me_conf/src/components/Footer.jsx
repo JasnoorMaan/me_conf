@@ -73,7 +73,7 @@ const Footer = () => {
                 <h4 className="normal-text font-semibold text-white mb-1">Dr. Satyender Singh</h4>
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center text-sm">
                   <p className="normal-text text-gray-300">satyenders@nitj.ac.in</p>
-                  <p className="normal-text text-gray-300 lg:text-right">+91 95722 25084</p>
+                  <p className="normal-text text-gray-300 lg:text-right">+91 70180 47897</p>
                 </div>
               </div>
               
@@ -81,7 +81,7 @@ const Footer = () => {
                 <h4 className="normal-text font-semibold text-white mb-1">Dr. Rajan Kumar</h4>
                 <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center text-sm">
                   <p className="normal-text text-gray-300">rajank@nitj.ac.in</p>
-                  <p className="normal-text text-gray-300 lg:text-right">+91 95722 25084</p>
+                  <p className="normal-text text-gray-300 lg:text-right">+91 88949 90325</p>
                 </div>
               </div>
               
@@ -110,7 +110,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-white transition-colors underline"
             >
-              Jasnoor Maan
+              Jasnoor Maan (ME 2021-25)
             </a>
           </div>
         </div>
