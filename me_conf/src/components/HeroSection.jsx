@@ -29,25 +29,29 @@ const HeroSection = () => {
         
         <div className="container mx-auto px-4 z-20 relative">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            <div className="py-8 inline-block">
-              <span className="bg-conf-green-100 text-conf-green-800 px-6 py-2 rounded-full normal-text font-semibold shadow-sm">
-                January 16th-18th, 2026 (Hybrid Mode)
+            <h1 className="heading font-heading leading-tight">
+              <span className="block highlighter1 mb-2">
+                1st International Conference<br />
+                on
               </span>
-            </div>
-            <h1 className="heading pb-6 font-heading leading-tight">
-              <span className="block highlighter1 mb-2">1st International Conference on</span>
               <span className="text-gray-900 block">
                 Thermo Fluids and
                 <span className="highlighter2"> Green Energy</span> Technology
               </span>
             </h1>
+            <div className="py-8 inline-block">
+              <span className="bg-conf-green-100 text-conf-green-800 px-6 py-2 rounded-full normal-text font-semibold shadow-sm 
+                             hover:scale-105 hover:shadow-lg hover:bg-conf-green-200 pillbox-animate">
+                January 16th-18th, 2026 (Hybrid Mode)
+              </span>
+            </div>
             <p className="normal-text text-gray-600 pb-4 max-w-3xl leading-relaxed">
               A platform for academicians, designers, researchers and consumers to exchange and share ideas, experiences and research results.
             </p>
             <p className="normal-text italic highlighter2 pb-8 font-medium">
               "From Present to Future Engineering Solutions"
             </p>
-            <div className="flex flex-wrap gap-4 justify-center pb-16">
+            <div className="flex flex-wrap gap-4 justify-center pb-8">
               <Button className="bg-conf-green-600 hover:bg-conf-green-700 text-white px-8 py-4 h-auto normal-text font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
                Submit Abstract
               </Button>
@@ -58,9 +62,9 @@ const HeroSection = () => {
             
             <div className="flex items-center">
               <div className="flex flex-col items-center">
-                <p className="muted-text text-gray-500 mb-3">Organized by</p>
-                <p className="normal-text font-semibold text-gray-800">Department of Mechanical Engineering</p>
-                <p className="normal-text text-gray-700">Dr. B.R Ambedkar National Institute of Technology Jalandhar</p>
+                <p className="muted-text text-gray-500 mb-2">Organized by</p>
+                <p className="subheading">Department of Mechanical Engineering</p>
+                <p className="normal-text text-gray-800">Dr. B.R Ambedkar National Institute of Technology Jalandhar</p>
               </div>
             </div>
           </div>
