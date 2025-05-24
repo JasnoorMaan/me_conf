@@ -139,15 +139,13 @@ const Footer = () => {
         </div>
         
         <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="muted-text text-gray-500 mb-4 md:mb-0">
+          <p className="normal-text text-gray-400 mb-4 md:mb-0">
             &copy; {currentYear} TFGET-2026. All rights reserved.
           </p>
-          <div className="flex space-x-4 muted-text text-gray-500">
-            <a href="#" className="hover:text-white transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              Terms of Service
+          <div className="flex space-x-2 normal-text text-gray-400">
+            <p className="normal-text">Developed by:</p>
+            <a href="https://www.linkedin.com/in/jasnoormaan/" className="hover:text-white transition-colors">
+              Jasnoor Maan
             </a>
           </div>
         </div>
