@@ -3,6 +3,20 @@ import { Button } from './ui/Button';
 const HeroSection = () => {
     return (
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
+        {/* Full-stretched background images - HeroBG1 and HeroBG2 - Hidden on mobile */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 hidden md:block"
+          style={{
+            backgroundImage: `url('/bgs/HeroBG1.png')`
+          }}
+        />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-8 hidden md:block"
+          style={{
+            backgroundImage: `url('/bgs/HeroBG2.png')`
+          }}
+        />
+        
         {/* Multiple Landing Background Images - Random Placement with Low Opacity */}
         <div 
           className="absolute top-20 left-10 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-30 rounded-lg"
