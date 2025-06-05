@@ -5,7 +5,7 @@ const HeroSection = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
         {/* Multiple Landing Background Images - Random Placement with Low Opacity */}
         <div 
-          className="absolute top-10 left-10 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-30 rounded-lg"
+          className="absolute top-20 left-10 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-30 rounded-lg"
           style={{
             backgroundImage: `url('/landing/Jalandhar.jpeg')`
           }}

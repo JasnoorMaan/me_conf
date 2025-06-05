@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, ChevronDown } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./ui/Button";
+import logo from "/Logo.jpeg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,8 +79,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 rounded-full bg-conf-green-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                <span className="font-semibold text-white normal-text">TF</span>
+              <div className="">
+                <img src={logo} alt="logo" className="w-12 h-6" />
               </div>
               <span className="normal-text font-semibold text-gray-800 hidden md:inline-block">
                 TFGET-2026
