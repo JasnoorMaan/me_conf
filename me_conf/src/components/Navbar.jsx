@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./ui/Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -15,6 +16,7 @@ const Navbar = () => {
 
   const scrollToSection = (sectionId) => {
     setIsOpen(false); // Close mobile menu
+    setIsCommitteeDropdownOpen(false); // Close dropdown
     
     if (location.pathname === '/') {
       // Already on home page, just scroll
@@ -53,11 +55,15 @@ const Navbar = () => {
     { name: "Home", href: "/", section: null, isRoute: true },
     { name: "About", href: "#about", section: "about", isRoute: false },
     { name: "Tracks", href: "#tracks", section: "tracks", isRoute: false },
-    { name: "Committee", href: "/committee", section: null, isRoute: true },
-    { name: "Advisory", href: "/advisory", section: null, isRoute: true },
     { name: "Important Dates", href: "#dates", section: "dates", isRoute: false },
+    { name: "Registration Fees", href: "/registration-fees", section: null, isRoute: true },
     { name: "Contact", href: "#contact", section: "contact", isRoute: false },
     { name: "Brochure", href: "#brochure", section: "brochure", isRoute: false },
+  ];
+
+  const committeeLinks = [
+    { name: "Advisory Committee", href: "/advisory" },
+    { name: "Organizing Committee", href: "/committee" },
   ];
 
   return (
@@ -89,7 +95,10 @@ const Navbar = () => {
                   key={link.name}
                   to={link.href}
                   className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsCommitteeDropdownOpen(false);
+                  }}
                 >
                   {link.name}
                 </Link>
@@ -103,6 +112,36 @@ const Navbar = () => {
                 </button>
               )
             ))}
+            
+            {/* Committees Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsCommitteeDropdownOpen(!isCommitteeDropdownOpen)}
+                className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer flex items-center space-x-1"
+              >
+                <span>Committees</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isCommitteeDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isCommitteeDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-10">
+                  {committeeLinks.map((committee) => (
+                    <Link
+                      key={committee.name}
+                      to={committee.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:text-conf-green-600 hover:bg-conf-green-50 transition-colors"
+                      onClick={() => {
+                        setIsCommitteeDropdownOpen(false);
+                        setIsOpen(false);
+                      }}
+                    >
+                      {committee.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+            
             <Button className="bg-conf-green-600 hover:bg-conf-green-700 text-white px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               Register Now
             </Button>
@@ -143,6 +182,24 @@ const Navbar = () => {
                   </button>
                 )
               ))}
+              
+              {/* Mobile Committees Section */}
+              <div className="border-b border-gray-100">
+                <div className="py-3 text text-gray-600 text-center font-medium">
+                  Committees
+                </div>
+                {committeeLinks.map((committee) => (
+                  <Link
+                    key={committee.name}
+                    to={committee.href}
+                    className="block py-2 pl-6 text-sm text-gray-600 hover:text-conf-green-600 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {committee.name}
+                  </Link>
+                ))}
+              </div>
+              
               <div className="mt-4 flex justify-center">
                 <Button className="bg-conf-green-600 hover:bg-conf-green-700 text-white px-6 py-2 shadow-lg">
                   Register Now

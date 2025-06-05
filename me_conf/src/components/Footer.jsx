@@ -54,6 +54,9 @@ const Footer = () => {
               </p>
               <img src={SPRINGERlogo} alt="Springer" className="h-12 mb-2" />
             </div>
+            <div>
+              <p className="normal-text font-semibold text-gray-300 py-4">The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft, and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
+            </div>
           </div>
           
           {/* Right Column - Contact Information */}

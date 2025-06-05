@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Advisory from './pages/Advisory';
 import CommitteePage from './pages/CommitteePage';
+import ComingSoon from './pages/ComingSoon';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/advisory" element={<Advisory />} />
         <Route path="/committee" element={<CommitteePage />} />
+        <Route path="/registration-fees" element={<ComingSoon />} />
       </Routes>
       <Footer />
     </Router>

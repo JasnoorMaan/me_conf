@@ -63,8 +63,8 @@ const HeroSection = () => {
             <div className="flex items-center">
               <div className="flex flex-col items-center">
                 <p className="muted-text text-gray-500 mb-2">Organized by</p>
-                <p className="subheading">Department of Mechanical Engineering</p>
-                <p className="normal-text text-gray-800">Dr. B.R Ambedkar National Institute of Technology Jalandhar</p>
+                <p className="normal-text md:text-xl font-semibold">Department of Mechanical Engineering</p>
+                <p className="normal-text md:text-xl font-semibold">Dr. B.R Ambedkar National Institute of Technology Jalandhar</p>
               </div>
             </div>
           </div>
