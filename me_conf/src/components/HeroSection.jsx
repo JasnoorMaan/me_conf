@@ -5,21 +5,21 @@ const HeroSection = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
         {/* Full-stretched background images - HeroBG1 and HeroBG2 - Hidden on mobile */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 hidden md:block"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 hidden md:block"
           style={{
             backgroundImage: `url('/bgs/HeroBG1.png')`
           }}
         />
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-8 hidden md:block"
+        {/* <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-3 hidden md:block"
           style={{
             backgroundImage: `url('/bgs/HeroBG2.png')`
           }}
-        />
+        /> */}
         
         {/* Multiple Landing Background Images - Random Placement with Low Opacity */}
         <div 
-          className="absolute top-20 left-10 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-30 rounded-lg"
+          className="absolute top-20 left-10 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-50 rounded-lg"
           style={{
             backgroundImage: `url('/landing/Jalandhar.jpeg')`
           }}
@@ -31,7 +31,7 @@ const HeroSection = () => {
           }}
         />
         <div 
-          className="absolute bottom-32 left-32 w-64 h-52 bg-cover bg-center bg-no-repeat opacity-40 rounded-lg"
+          className="absolute bottom-20 left-32 w-64 h-52 bg-cover bg-center bg-no-repeat opacity-40 rounded-lg"
           style={{
             backgroundImage: `url('/landing/JallianwalaBagh.jpg')`
           }}
@@ -56,7 +56,7 @@ const HeroSection = () => {
             <div className="py-8 inline-block">
               <span className="bg-conf-green-100 text-conf-green-800 px-6 py-2 rounded-full normal-text font-semibold shadow-sm 
                              hover:scale-105 hover:shadow-lg hover:bg-conf-green-200 pillbox-animate">
-                January 16th-18th, 2026 (Hybrid Mode)
+                January 16-18, 2026 (Hybrid Mode)
               </span>
             </div>
             <p className="normal-text text-gray-600 pb-4 max-w-3xl leading-relaxed">

@@ -55,7 +55,10 @@ const Footer = () => {
               <img src={SPRINGERlogo} alt="Springer" className="h-12 mb-2" />
             </div>
             <div>
-              <p className="normal-text font-semibold text-gray-300 py-4">The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft, and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
+            <p className="normal-text font-semibold text-white pb-2 pt-6">
+                Acknowledgement:
+              </p>
+              <p className="normal-text font-semibold text-gray-300 pb-4 pt-2">The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft, and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
             </div>
           </div>
           
