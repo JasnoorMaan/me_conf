@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState(false);
+  const [isGuidelinesDropdownOpen, setIsGuidelinesDropdownOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -18,6 +19,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     setIsOpen(false); // Close mobile menu
     setIsCommitteeDropdownOpen(false); // Close dropdown
+    setIsGuidelinesDropdownOpen(false); // Close guidelines dropdown
     
     if (location.pathname === '/') {
       // Already on home page, just scroll
@@ -58,13 +60,17 @@ const Navbar = () => {
     { name: "Tracks", href: "#tracks", section: "tracks", isRoute: false },
     { name: "Important Dates", href: "#dates", section: "dates", isRoute: false },
     { name: "Registration Fees", href: "/registration-fees", section: null, isRoute: true },
-    { name: "Contact", href: "#contact", section: "contact", isRoute: false },
     { name: "Brochure", href: "#brochure", section: "brochure", isRoute: false },
   ];
 
   const committeeLinks = [
     { name: "Advisory Committee", href: "/advisory" },
     { name: "Organizing Committee", href: "/committee" },
+  ];
+
+  const guidelinesLinks = [
+    { name: "Author Guidelines", href: "/guidelines" },
+    { name: "Submission Guidelines", href: "/submission-guidelines" },
   ];
 
   return (
@@ -99,6 +105,7 @@ const Navbar = () => {
                   onClick={() => {
                     setIsOpen(false);
                     setIsCommitteeDropdownOpen(false);
+                    setIsGuidelinesDropdownOpen(false);
                   }}
                 >
                   {link.name}
@@ -117,7 +124,10 @@ const Navbar = () => {
             {/* Committees Dropdown */}
             <div className="relative">
               <button
-                onClick={() => setIsCommitteeDropdownOpen(!isCommitteeDropdownOpen)}
+                onClick={() => {
+                  setIsCommitteeDropdownOpen(!isCommitteeDropdownOpen);
+                  setIsGuidelinesDropdownOpen(false);
+                }}
                 className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer flex items-center space-x-1"
               >
                 <span>Committees</span>
@@ -133,10 +143,44 @@ const Navbar = () => {
                       className="block px-4 py-2 text-sm text-gray-700 hover:text-conf-green-600 hover:bg-conf-green-50 transition-colors"
                       onClick={() => {
                         setIsCommitteeDropdownOpen(false);
+                        setIsGuidelinesDropdownOpen(false);
                         setIsOpen(false);
                       }}
                     >
                       {committee.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Guidelines Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => {
+                  setIsGuidelinesDropdownOpen(!isGuidelinesDropdownOpen);
+                  setIsCommitteeDropdownOpen(false);
+                }}
+                className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer flex items-center space-x-1"
+              >
+                <span>Guidelines</span>
+                <ChevronDown size={16} className={`transition-transform duration-200 ${isGuidelinesDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isGuidelinesDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-10">
+                  {guidelinesLinks.map((guideline) => (
+                    <Link
+                      key={guideline.name}
+                      to={guideline.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:text-conf-green-600 hover:bg-conf-green-50 transition-colors"
+                      onClick={() => {
+                        setIsGuidelinesDropdownOpen(false);
+                        setIsCommitteeDropdownOpen(false);
+                        setIsOpen(false);
+                      }}
+                    >
+                      {guideline.name}
                     </Link>
                   ))}
                 </div>
@@ -168,7 +212,7 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className="block py-3 text text-gray-700 hover:text-conf-green-600 transition-colors text-center border-b border-gray-100 last:border-b-0"
+                    className="block py-3 text font-semibold text-gray-700 hover:text-conf-green-600 transition-colors text-center border-b border-gray-100 last:border-b-0"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
@@ -177,7 +221,7 @@ const Navbar = () => {
                   <button
                     key={link.name}
                     onClick={() => link.section ? scrollToSection(link.section) : window.scrollTo({top: 0, behavior: 'smooth'})}
-                    className="block py-3 text text-gray-700 hover:text-conf-green-600 transition-colors text-center border-b border-gray-100 last:border-b-0 w-full bg-transparent border-none cursor-pointer"
+                    className="block py-3 text font-semibold text-gray-700 hover:text-conf-green-600 transition-colors text-center border-b border-gray-100 last:border-b-0 w-full bg-transparent border-none cursor-pointer"
                   >
                     {link.name}
                   </button>
@@ -193,10 +237,27 @@ const Navbar = () => {
                   <Link
                     key={committee.name}
                     to={committee.href}
-                    className="block py-2 pl-6 text-sm text-gray-600 hover:text-conf-green-600 transition-colors"
+                    className="block py-2 text-center text-sm text-gray-600 hover:text-conf-green-600 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {committee.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Mobile Guidelines Section */}
+              <div className="border-b border-gray-100">
+                <div className="py-3 text text-gray-600 text-center font-medium">
+                  Guidelines
+                </div>
+                {guidelinesLinks.map((guideline) => (
+                  <Link
+                    key={guideline.name}
+                    to={guideline.href}
+                    className="block py-2 text-center text-sm text-gray-600 hover:text-conf-green-600 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {guideline.name}
                   </Link>
                 ))}
               </div>

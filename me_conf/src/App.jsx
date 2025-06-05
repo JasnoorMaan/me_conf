@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import Advisory from './pages/Advisory';
 import CommitteePage from './pages/CommitteePage';
 import ComingSoon from './pages/ComingSoon';
+import Guidelines from './pages/Guidelines';
+import SubmissionGuidelines from './pages/SubmissionGuidelines';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/advisory" element={<Advisory />} />
         <Route path="/committee" element={<CommitteePage />} />
         <Route path="/registration-fees" element={<ComingSoon />} />
+        <Route path="/guidelines" element={<Guidelines />} />
+        <Route path="/submission-guidelines" element={<SubmissionGuidelines />} />
       </Routes>
       <Footer />
     </Router>
