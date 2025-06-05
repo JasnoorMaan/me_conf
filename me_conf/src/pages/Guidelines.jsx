@@ -41,7 +41,7 @@ const Guidelines = () => {
             </h2>
             
             <p className="mb-4">
-              The Microsoft Conference Management Tool (CMT) will be used for all abstract and paper submissions [click here CMT Guidelines]. Submissions to TFGET26 will typically be reviewed by two to three reviewers. Some crucial components to help authors have a seamless submission and review process are listed below.
+              The Microsoft Conference Management Tool (CMT) will be used for all abstract and paper submissions [<a href="https://cmt3.research.microsoft.com/docs/help/author/author-submission-form.html" target="_blank" rel="noopener noreferrer" className="text-conf-green-600 hover:text-conf-green-700 underline">click here CMT Guidelines</a>]. Submissions to TFGET26 will typically be reviewed by two to three reviewers. Some crucial components to help authors have a seamless submission and review process are listed below.
             </p>
             
             <p className="mb-4">
