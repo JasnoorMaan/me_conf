@@ -4,7 +4,7 @@ const Timeline = () => {
   const TimelineData = [
     {
       id: 1,
-      date: "1st Aug 2025",
+      date: "10th Aug 2025",
       title: "Extended Abstract Submission",
       description: "Last date for submission of extended abstract",
       status: "upcoming"

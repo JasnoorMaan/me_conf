@@ -56,7 +56,7 @@ const ConferenceThemes = () => {
               </p>
               <div className="mt-6 p-4 bg-conf-green-50 rounded-lg border border-conf-green-200">
                 <p className="text highlighter2 font-semibold">
-                  📋 Review Process: Double-blind peer review ensuring quality and fairness
+                  📋 Review Process: Peer review ensuring quality and fairness
                 </p>
               </div>
             </div>

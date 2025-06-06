@@ -88,7 +88,7 @@ const Navbar = () => {
               <div className="">
                 <img src={logo} alt="logo" className="w-12 h-6" />
               </div>
-              <span className="normal-text font-semibold text-gray-800 hidden md:inline-block">
+              <span className="normal-text font-bold hidden md:inline-block">
                 TFGET-2026
               </span>
             </Link>
@@ -101,7 +101,7 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105"
+                  className="norma-text font-semibold text-black hover:text-conf-green-600 transition-all duration-300 hover:scale-105"
                   onClick={() => {
                     setIsOpen(false);
                     setIsCommitteeDropdownOpen(false);
@@ -114,7 +114,7 @@ const Navbar = () => {
                 <button
                   key={link.name}
                   onClick={() => link.section ? scrollToSection(link.section) : window.scrollTo({top: 0, behavior: 'smooth'})}
-                  className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer"
+                  className="norma-text font-semibold text-black hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer"
                 >
                   {link.name}
                 </button>
@@ -128,7 +128,7 @@ const Navbar = () => {
                   setIsCommitteeDropdownOpen(!isCommitteeDropdownOpen);
                   setIsGuidelinesDropdownOpen(false);
                 }}
-                className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer flex items-center space-x-1"
+                className="norma-text font-semibold text-black hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer flex items-center space-x-1"
               >
                 <span>Committees</span>
                 <ChevronDown size={16} className={`transition-transform duration-200 ${isCommitteeDropdownOpen ? 'rotate-180' : ''}`} />
@@ -161,7 +161,7 @@ const Navbar = () => {
                   setIsGuidelinesDropdownOpen(!isGuidelinesDropdownOpen);
                   setIsCommitteeDropdownOpen(false);
                 }}
-                className="norma-text text-gray-700 hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer flex items-center space-x-1"
+                className="norma-text font-semibold text-black hover:text-conf-green-600 transition-all duration-300 hover:scale-105 bg-transparent border-none cursor-pointer flex items-center space-x-1"
               >
                 <span>Guidelines</span>
                 <ChevronDown size={16} className={`transition-transform duration-200 ${isGuidelinesDropdownOpen ? 'rotate-180' : ''}`} />

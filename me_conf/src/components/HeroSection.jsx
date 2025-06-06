@@ -5,9 +5,10 @@ const HeroSection = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
         {/* Full-stretched background images - HeroBG1 and HeroBG2 - Hidden on mobile */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 hidden md:block"
+          className="absolute inset-0 bg-cover bg-no-repeat opacity-30 hidden md:block"
           style={{
-            backgroundImage: `url('/bgs/HeroBG1.png')`
+            backgroundImage: `url('/bgs/HeroBG1.webp')`,
+            backgroundPosition: 'center 20%'
           }}
         />
         {/* <div 
@@ -19,19 +20,25 @@ const HeroSection = () => {
         
         {/* Multiple Landing Background Images - Random Placement with Low Opacity */}
         <div 
-          className="absolute top-20 left-10 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-50 rounded-lg"
+          className="absolute top-20 left-10 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg"
           style={{
             backgroundImage: `url('/landing/Jalandhar.jpeg')`
           }}
         />
         <div 
-          className="absolute top-62 right-20 w-80 h-60 bg-cover bg-center bg-no-repeat opacity-40 rounded-lg "
+          className="absolute top-12 right-20 w-80 h-60 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg "
           style={{
             backgroundImage: `url('/landing/GoldenTemple.webp')`
           }}
         />
         <div 
-          className="absolute bottom-20 left-32 w-64 h-52 bg-cover bg-center bg-no-repeat opacity-40 rounded-lg"
+          className="absolute bottom-10 right-12 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg"
+          style={{
+            backgroundImage: `url('/landing/Pillar.jpeg')`
+          }}
+        />
+        <div 
+          className="absolute bottom-20 left-10 w-64 h-52 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg"
           style={{
             backgroundImage: `url('/landing/JallianwalaBagh.jpg')`
           }}
@@ -59,10 +66,10 @@ const HeroSection = () => {
                 January 16-18, 2026 (Hybrid Mode)
               </span>
             </div>
-            <p className="normal-text text-gray-600 pb-4 max-w-3xl leading-relaxed">
+            <p className="normal-text pb-4 max-w-3xl leading-relaxed">
               A platform for academicians, designers, researchers and consumers to exchange and share ideas, experiences and research results.
             </p>
-            <p className="normal-text italic highlighter2 pb-8 font-medium">
+            <p className="normal-text font-semibold italic pb-8 ">
               "From Present to Future Engineering Solutions"
             </p>
             <div className="flex flex-wrap gap-4 justify-center pb-8">
@@ -76,7 +83,7 @@ const HeroSection = () => {
             
             <div className="flex items-center">
               <div className="flex flex-col items-center">
-                <p className="muted-text text-gray-500 mb-2">Organized by</p>
+                <p className="normal-text font-semibold mb-2">Organized by</p>
                 <p className="normal-text md:text-xl font-semibold">Department of Mechanical Engineering</p>
                 <p className="normal-text md:text-xl font-semibold">Dr. B.R Ambedkar National Institute of Technology Jalandhar</p>
               </div>

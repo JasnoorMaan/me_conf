@@ -22,7 +22,7 @@ const AdvisoryComm = () => {
     "Prof. Sanjeev Jain, Indian Institute of Technology, Delhi",
     "Prof. B. Premchandran, Indian Institute of Technology, Delhi",
     "Dr. S. N. Singh, IIT(ISM) Dhanbad",
-    "Prof. Rakesh Sehgal, NIT Srinagar",
+    "Prof. Rakesh Sehgal, NIT Hamirpur",
     "Prof. Satish Kumar, NIT Kurukshetra",
     "Prof. Jagdev Singh, Beant College of Engineering and Technology, Gurdaspur",
   ];
@@ -39,7 +39,8 @@ const AdvisoryComm = () => {
      "Dr. Naomi Boness, Managing Director, Natural Gas Initiative, Stanford University, California, USA.",
      "Prof. PV Aravind,University Groningen, The Netherlands",
      "Prof. Jayanta Kapat, University of Central Florida, USA",
-     "Prof. B V Reddy, Ontario Tech University, Canada",
+     "Prof. Shripad P. Mahulikar, Ikerbasque Research Professor, UPV/EHU",
+     "Prof. Manosh C Paul, The University of Glasgow",
      "Dr. Arvind Gangoli Rao, Delft University of Technology, Delft",
   ];
 
