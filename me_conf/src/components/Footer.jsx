@@ -42,7 +42,7 @@ const Footer = () => {
               <h2 className="subheading text-white pb-2">Dr. B.R. Ambedkar National Institute of Technology Jalandhar</h2>
             </div>
             <p className="normal-text font-semibold text-white pb-4">
-              1st International Conference on Thermo Fluids and Green Energy Technology
+              1<sup>st</sup> International Conference on Thermo Fluids and Green Energy Technology
             </p>
             <p className="normal-text text-gray-200 pb-6">
               January 16-18, 2026<br />

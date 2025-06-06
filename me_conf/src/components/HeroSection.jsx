@@ -18,27 +18,31 @@ const HeroSection = () => {
           }}
         /> */}
         
-        {/* Multiple Landing Background Images - Random Placement with Low Opacity */}
+        {/* Multiple Landing Background Images - Perfectly positioned at corners */}
+        {/* Top Left Corner - Jalandhar */}
         <div 
-          className="absolute top-20 left-10 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg"
+          className="absolute top-24 left-4 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg hidden md:block"
           style={{
             backgroundImage: `url('/landing/Jalandhar.jpeg')`
           }}
         />
+        {/* Top Right Corner - Golden Temple */}
         <div 
-          className="absolute top-12 right-20 w-80 h-60 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg "
+          className="absolute top-24 right-4 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg hidden md:block"
           style={{
             backgroundImage: `url('/landing/GoldenTemple.webp')`
           }}
         />
+        {/* Bottom Right Corner - Pillar */}
         <div 
-          className="absolute bottom-10 right-12 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg"
+          className="absolute bottom-24 right-4 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg hidden md:block"
           style={{
             backgroundImage: `url('/landing/Pillar.jpeg')`
           }}
         />
+        {/* Bottom Left Corner - Jallianwala Bagh */}
         <div 
-          className="absolute bottom-20 left-10 w-64 h-52 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg"
+          className="absolute bottom-24 left-4 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg hidden md:block"
           style={{
             backgroundImage: `url('/landing/JallianwalaBagh.jpg')`
           }}
@@ -52,7 +56,7 @@ const HeroSection = () => {
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             <h1 className="heading font-heading leading-tight">
               <span className="block highlighter1 mb-2">
-                1st International Conference<br />
+                1<sup>st</sup> International Conference<br />
                 on
               </span>
               <span className="text-gray-900 block">

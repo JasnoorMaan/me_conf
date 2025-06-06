@@ -11,7 +11,7 @@ const About = () => {
       <div className='container mx-auto max-w-4xl mb-16'>
         <h1 className='heading text-center mb-12'>About TFGET</h1>
         <p className='normal-text text-justify leading-relaxed'>
-          TFGET The 1st International Conference offers a platform for academicians, designers,
+          TFGET The 1<sup>st</sup> International Conference offers a platform for academicians, designers,
           researchers, and consumers from all corners of the globe to exchange and share their
           experiences and research results on all aspects of thermodynamics, heat transfer, fluid
           mechanics, green and sustainable energy. It also provides an interdisciplinary forum for

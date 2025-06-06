@@ -99,7 +99,7 @@ const ConferenceThemes = () => {
               Submit Abstract
             </button>
             <button className="border-2 border-white text-white px-6 py-3 rounded-lg text font-semibold hover:bg-white hover:text-conf-green-600 transition-colors">
-              Download Guidelines
+              Submit Paper
             </button>
           </div>
         </div>

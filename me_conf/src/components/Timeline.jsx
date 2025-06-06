@@ -4,28 +4,28 @@ const Timeline = () => {
   const TimelineData = [
     {
       id: 1,
-      date: "10th Aug 2025",
+      date: "10<sup>th</sup> Aug 2025",
       title: "Extended Abstract Submission",
       description: "Last date for submission of extended abstract",
       status: "upcoming"
     },
     {
       id: 2,
-      date: "15th Sep 2025", 
+      date: "15<sup>th</sup> Sep 2025", 
       title: "Full-Length Paper Submission",
       description: "Last date for submission of full-length paper",
       status: "upcoming"
     },
     {
       id: 3,
-      date: "1st Dec 2025",
+      date: "1<sup>st</sup> Dec 2025",
       title: "Camera-Ready Paper Submission", 
       description: "Last date for submission of camera-ready paper",
       status: "upcoming"
     },
     {
       id: 4,
-      date: "05th Jan 2026",
+      date: "05<sup>th</sup> Jan 2026",
       title: "Registration Closes",
       description: "Registration closing date",
       status: "upcoming"
@@ -73,7 +73,7 @@ const Timeline = () => {
                       ? 'bg-conf-green-600 text-white' 
                       : 'bg-conf-green-100 text-conf-green-800'
                   }`}>
-                    <span className="muted-text font-semibold">{item.date}</span>
+                    <span className="muted-text font-semibold" dangerouslySetInnerHTML={{ __html: item.date }}></span>
                   </div>
                   
                   {/* Title */}
