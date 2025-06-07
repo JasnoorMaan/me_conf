@@ -17,7 +17,7 @@ const AboutMech = () => {
                 rgba(0, 0, 0, ${isHovered ? '0.75' : '0.4'}) 0%, 
                 rgba(0, 0, 0, ${isHovered ? '0.85' : '0.5'}) 100%
               ),
-              url('/NITJmech.jpg')
+              url('/NITJmech.webp')
             `,
             backgroundSize: 'cover',
             backgroundPosition: 'center',

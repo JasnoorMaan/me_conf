@@ -35,7 +35,7 @@ const About = () => {
                 rgba(0, 0, 0, ${isHovered ? '0.75' : '0.4'}) 0%, 
                 rgba(0, 0, 0, ${isHovered ? '0.85' : '0.5'}) 100%
               ),
-              url('/NITJ.jpg')
+              url('/NITJ.webp')
             `,
             backgroundSize: 'cover',
             backgroundPosition: 'center',

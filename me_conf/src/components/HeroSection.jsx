@@ -14,7 +14,7 @@ const HeroSection = () => {
         {/* <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-3 hidden md:block"
           style={{
-            backgroundImage: `url('/bgs/HeroBG2.png')`
+            backgroundImage: `url('/bgs/HeroBG2.webp')`
           }}
         /> */}
         
@@ -23,7 +23,7 @@ const HeroSection = () => {
         <div 
           className="absolute top-24 left-4 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg hidden md:block"
           style={{
-            backgroundImage: `url('/landing/Jalandhar.jpeg')`
+            backgroundImage: `url('/landing/Jalandhar.webp')`
           }}
         />
         {/* Top Right Corner - Golden Temple */}
@@ -37,14 +37,14 @@ const HeroSection = () => {
         <div 
           className="absolute bottom-24 right-4 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg hidden md:block"
           style={{
-            backgroundImage: `url('/landing/Pillar.jpeg')`
+            backgroundImage: `url('/landing/Pillar.webp')`
           }}
         />
         {/* Bottom Left Corner - Jallianwala Bagh */}
         <div 
-          className="absolute bottom-24 left-4 w-72 h-48 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg hidden md:block"
+          className="absolute bottom-24 left-4 w-64 h-52 bg-cover bg-center bg-no-repeat opacity-80 rounded-lg hidden md:block"
           style={{
-            backgroundImage: `url('/landing/JallianwalaBagh.jpg')`
+            backgroundImage: `url('/landing/JallianwalaBagh.webp')`
           }}
         />
         

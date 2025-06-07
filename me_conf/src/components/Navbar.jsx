@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, ChevronDown } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "./ui/Button";
-import logo from "/Logo.jpeg";
+import logo from "/Logo.webp";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,6 +60,7 @@ const Navbar = () => {
     { name: "Tracks", href: "#tracks", section: "tracks", isRoute: false },
     { name: "Important Dates", href: "#dates", section: "dates", isRoute: false },
     { name: "Registration Fees", href: "/registration-fees", section: null, isRoute: true },
+    // { name: "Acknowledgments", href: "/acknowledgments", section: null, isRoute: true },
     { name: "Brochure", href: "#brochure", section: "brochure", isRoute: false },
   ];
 

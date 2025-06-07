@@ -25,9 +25,20 @@ const Speakers = () => {
     id: `coming-soon-${index}`,
     name: "",
     affiliation: "Speaker details will be announced",
-    image: "/speakers/placeholder.jpg",
+    image: "/speakers/placeholder.webp",
     isComingSoon: true
   }));
+
+  const speakers = [
+    {
+      id: 1,
+      name: "Coming Soon",
+      title: "Keynote Speaker",
+      image: "/speakers/placeholder.webp",
+      bio: "Details will be announced soon"
+    },
+    // Add more speakers as needed
+  ];
 
   return (
     <section className="py-16 px-4">

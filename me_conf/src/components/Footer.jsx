@@ -28,7 +28,7 @@ const Footer = () => {
               rgba(17, 24, 39, 0.85) 60%, 
               rgba(17, 24, 39, 0.7) 100%
             ),
-            url('/bgs/FooterBG.png')
+            url('/bgs/FooterBG.webp')
           `,
           backgroundPosition: 'bottom center'
         }}
@@ -56,9 +56,9 @@ const Footer = () => {
             </div>
             <div>
             <p className="normal-text font-semibold text-white pb-2 pt-6">
-                Acknowledgement:
+                <a href="/acknowledgments" className="text-white hover:text-conf-green-400 transition-colors underline">Acknowledgement:</a>
               </p>
-              <p className="normal-text font-semibold text-gray-300 pb-4 pt-2">The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft, and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
+              <p className="normal-text font-semibold text-gray-300 pb-4 pt-2">The <a href="https://cmt3.research.microsoft.com/User/Login" target="_blank" rel="noopener noreferrer" className="text-conf-green-400 hover:text-conf-green-300 underline">Microsoft CMT service</a> was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft, and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
             </div>
           </div>
           

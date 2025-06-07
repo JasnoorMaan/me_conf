@@ -8,6 +8,7 @@ import CommitteePage from './pages/CommitteePage';
 import ComingSoon from './pages/ComingSoon';
 import Guidelines from './pages/Guidelines';
 import SubmissionGuidelines from './pages/SubmissionGuidelines';
+import Acknowledgments from './pages/Acknowledgments';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/registration-fees" element={<ComingSoon />} />
         <Route path="/guidelines" element={<Guidelines />} />
         <Route path="/submission-guidelines" element={<SubmissionGuidelines />} />
+        <Route path="/acknowledgments" element={<Acknowledgments />} />
       </Routes>
       <Footer />
     </Router>

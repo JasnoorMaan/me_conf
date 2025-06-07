@@ -7,17 +7,15 @@ const ConferenceThemes = () => {
     <section id="tracks" className="relative py-16 px-4 overflow-hidden">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center opacity-30"
         style={{
           backgroundImage: `
             linear-gradient(to bottom, 
-              rgba(249, 250, 251, 0.92) 0%, 
-              rgba(249, 250, 251, 0.85) 30%, 
-              rgba(249, 250, 251, 0.92) 100%
+              rgba(255, 255, 255, 0.9), 
+              rgba(255, 255, 255, 0.8)
             ),
-            url('/bgs/HeroBG2.png')
-          `,
-          backgroundPosition: 'center center'
+            url('/bgs/HeroBG2.webp')
+          `
         }}
       />
       
